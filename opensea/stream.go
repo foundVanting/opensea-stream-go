@@ -2,10 +2,10 @@ package opensea
 
 import (
 	"fmt"
+	"github.com/foundVanting/opensea-stream-go/types"
 	"github.com/nshafer/phx"
 	"log"
 	"net/url"
-	"opensea-stream-go/types"
 )
 
 type StreamClient struct {
