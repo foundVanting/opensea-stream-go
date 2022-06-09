@@ -24,5 +24,4 @@ func main() {
 		fmt.Printf("%+v\n", itemListedEvent)
 	})
 	select {}
-
 }
