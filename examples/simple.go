@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
+	"github.com/foundVanting/opensea-stream-go/entity"
+	"github.com/foundVanting/opensea-stream-go/opensea"
+	"github.com/foundVanting/opensea-stream-go/types"
 	"github.com/mitchellh/mapstructure"
 	"github.com/nshafer/phx"
-	"opensea-stream-go/entity"
-	"opensea-stream-go/opensea"
-	"opensea-stream-go/types"
 )
 
 func main() {

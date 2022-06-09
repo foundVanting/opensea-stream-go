@@ -32,13 +32,22 @@ In order to make onboarding easy, we've integrated the OpenSea Stream API with o
 
 
 ```golang
+import (
+"fmt"
+"github.com/foundVanting/opensea-stream-go/entity"
+"github.com/foundVanting/opensea-stream-go/opensea"
+"github.com/foundVanting/opensea-stream-go/types"
+"github.com/mitchellh/mapstructure"
+"github.com/nshafer/phx"
+)
+
 func main() {
     client := opensea.NewStreamClient(types.MAINNET, "api-key", phx.LogInfo, func(err error) {
         fmt.Println("NewStreamClient err:", err)
     })
     client.Connect()
 
-    client.OnItemListed("ens", func(response any) {
+    client.OnItemListed("collection-slug", func(response any) {
         var itemListedEvent entity.ItemListedEvent
         err := mapstructure.Decode(response, &itemListedEvent)
         if err != nil {
