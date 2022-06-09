@@ -15,8 +15,11 @@ Documentation: https://docs.opensea.io/reference/stream-api-overview
 
 # Installation
 This module requires Go 1.18 or later.
+Standard `go get`:
 
-`go get github.com/foundVanting/opensea-stream-go`
+```
+$ go get github.com/foundVanting/opensea-stream-go
+```
 
 # Getting Started
 
