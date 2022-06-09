@@ -1,4 +1,5 @@
-module opensea-stream-go
+module github.com/foundVanting/opensea-stream-go
+
 
 go 1.18
 
