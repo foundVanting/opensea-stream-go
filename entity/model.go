@@ -111,7 +111,7 @@ type ItemCancelledEventPayload struct {
 	PaymentToken       PaymentToken `mapstructure:"payment_token"`
 	EventTimestamp     string       `mapstructure:"event_timestamp"`
 }
-type ItemMetadataUpdate struct {
+type ItemMetadataUpdateEvent struct {
 	BaseStreamMessage `mapstructure:",squash"`
 	Payload           ItemMetadataUpdatePayload `mapstructure:"payload"`
 }
