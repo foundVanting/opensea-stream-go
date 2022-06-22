@@ -94,12 +94,21 @@ func (s StreamClient) OnItemListed(collectionSlug string, Callback func(itemList
 	s.on(types.ItemListed, collectionSlug, Callback)
 }
 
-func (s StreamClient) OnItemSold(collectionSlug string, Callback func(itemListedEvent any)) {
+func (s StreamClient) OnItemSold(collectionSlug string, Callback func(itemSoldEvent any)) {
 	s.on(types.ItemSold, collectionSlug, Callback)
 }
-func (s StreamClient) OnItemTransferred(collectionSlug string, Callback func(itemListedEvent any)) {
+func (s StreamClient) OnItemTransferred(collectionSlug string, Callback func(itemTransferredEvent any)) {
 	s.on(types.ItemTransferred, collectionSlug, Callback)
 }
-func (s StreamClient) OnItemCancelled(collectionSlug string, Callback func(itemListedEvent any)) {
+func (s StreamClient) OnItemCancelled(collectionSlug string, Callback func(itemCancelledEvent any)) {
 	s.on(types.ItemCancelled, collectionSlug, Callback)
+}
+func (s StreamClient) OnItemReceivedBid(collectionSlug string, Callback func(itemReceivedBidEvent any)) {
+	s.on(types.ItemReceivedBid, collectionSlug, Callback)
+}
+func (s StreamClient) OnItemReceivedOffer(collectionSlug string, Callback func(itemReceivedOfferEvent any)) {
+	s.on(types.ItemReceivedOffer, collectionSlug, Callback)
+}
+func (s StreamClient) OnItemMetadataUpdated(collectionSlug string, Callback func(itemMetadataUpdatedEvent any)) {
+	s.on(types.ItemMetadataUpdated, collectionSlug, Callback)
 }
