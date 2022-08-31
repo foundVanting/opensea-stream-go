@@ -9,7 +9,7 @@ const (
 	ItemTransferred     EventType = "item_transferred"
 	ItemReceivedOffer   EventType = "item_received_offer"
 	ItemReceivedBid     EventType = "item_received_bid"
-	ItemCancelled       EventType = "item_cancelle"
+	ItemCancelled       EventType = "item_cancelled"
 )
 
 type Network string
