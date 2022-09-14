@@ -13,7 +13,10 @@ func main() {
 	client := opensea.NewStreamClient(types.MAINNET, "apikey", phx.LogInfo, func(err error) {
 		fmt.Println("opensea.NewStreamClient err:", err)
 	})
-	client.Connect()
+	if err := client.Connect(); err == nil {
+		fmt.Println("client.Connect err:", err)
+		return
+	}
 
 	client.OnItemListed("collection-slug", func(response any) {
 		var itemListedEvent entity.ItemListedEvent

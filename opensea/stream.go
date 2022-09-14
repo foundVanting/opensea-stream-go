@@ -24,6 +24,12 @@ func NewStreamClient(network types.Network, token string, logLevel phx.LoggerLev
 	socket := phx.NewSocket(endPoint)
 
 	socket.OnError(onError)
+	socket.OnClose(func() {
+		err := socket.Reconnect()
+		if err != nil {
+			onError(err)
+		}
+	})
 	socket.Logger = phx.NewSimpleLogger(logLevel)
 	return &StreamClient{
 		socket:   socket,
@@ -67,7 +73,6 @@ func (s StreamClient) getChannel(topic string) (channel *phx.Channel) {
 }
 
 func (s StreamClient) on(eventType types.EventType, collectionSlug string, callback func(payload any)) func() {
-	s.socket.Connect()
 	topic := collectionTopic(collectionSlug)
 	fmt.Printf("Fetching channel %s\n", topic)
 	channel := s.getChannel(topic)
