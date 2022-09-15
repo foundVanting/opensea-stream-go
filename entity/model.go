@@ -104,12 +104,13 @@ type ItemCancelledEvent struct {
 	Payload           ItemCancelledEventPayload `mapstructure:"payload"`
 }
 type ItemCancelledEventPayload struct {
-	PayloadItemAndColl `mapstructure:",squash"`
-	Quantity           int          `mapstructure:"quantity"`
-	ListingType        string       `mapstructure:"listing_type"`
-	Transaction        Transaction  `mapstructure:"transaction"`
-	PaymentToken       PaymentToken `mapstructure:"payment_token"`
-	EventTimestamp     string       `mapstructure:"event_timestamp"`
+	ItemListedEventPayload `mapstructure:",squash"`
+	Transaction            Transaction `mapstructure:"transaction"`
+	//PayloadItemAndColl `mapstructure:",squash"`
+	//Quantity           int          `mapstructure:"quantity"`
+	//ListingType        string       `mapstructure:"listing_type"`
+	//PaymentToken       PaymentToken `mapstructure:"payment_token"`
+	//EventTimestamp     string       `mapstructure:"event_timestamp"`
 }
 type ItemMetadataUpdateEvent struct {
 	BaseStreamMessage `mapstructure:",squash"`
