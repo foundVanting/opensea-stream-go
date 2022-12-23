@@ -14,6 +14,7 @@ type BaseItemType struct {
 type PayloadItemAndColl struct {
 	Item       BaseItemType `mapstructure:"item"`
 	Collection Collection   `mapstructure:"collection"`
+	OrderHash  string       `json:"order_hash"`
 }
 
 type Collection struct {
@@ -106,6 +107,7 @@ type ItemCancelledEvent struct {
 type ItemCancelledEventPayload struct {
 	ItemListedEventPayload `mapstructure:",squash"`
 	Transaction            Transaction `mapstructure:"transaction"`
+
 	//PayloadItemAndColl `mapstructure:",squash"`
 	//Quantity           int          `mapstructure:"quantity"`
 	//ListingType        string       `mapstructure:"listing_type"`
