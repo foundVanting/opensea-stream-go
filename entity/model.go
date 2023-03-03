@@ -14,7 +14,7 @@ type BaseItemType struct {
 type PayloadItemAndColl struct {
 	Item       BaseItemType `mapstructure:"item"`
 	Collection Collection   `mapstructure:"collection"`
-	OrderHash  string       `json:"order_hash"`
+	OrderHash  string       `mapstructure:"order_hash"`
 }
 
 type Collection struct {
