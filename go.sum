@@ -2,7 +2,5 @@ github.com/gorilla/websocket v1.5.0 h1:PPwGk2jz7EePpoHN/+ClbZu8SPxiqlu12wZP/3sWm
 github.com/gorilla/websocket v1.5.0/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=
-github.com/nshafer/phx v0.2.0 h1:cDGDUe8YHhW8RxqNqfhwfDF3tN333VEmam6OiwPqx6k=
-github.com/nshafer/phx v0.2.0/go.mod h1:YkYF7ulSMG5nJnxu4nMYT7qQqIZ+1bOd36cY5RqBYD8=
 github.com/xiaowang7777/phx v0.0.2 h1:xZF/1zEY1DGPmUDnINwxyK29zbZ7vU1DxtzT9UWFP2E=
 github.com/xiaowang7777/phx v0.0.2/go.mod h1:N4fTEOgB1sPInd8ywRV5oGGcgA/nnS1AtNtkGz08lG8=
