@@ -3,7 +3,7 @@ package opensea
 import (
 	"fmt"
 	"github.com/foundVanting/opensea-stream-go/types"
-	"github.com/nshafer/phx"
+	"github.com/xiaowang7777/phx"
 	"log"
 	"net/url"
 	"sync"

@@ -6,7 +6,7 @@ import (
 	"github.com/foundVanting/opensea-stream-go/opensea"
 	"github.com/foundVanting/opensea-stream-go/types"
 	"github.com/mitchellh/mapstructure"
-	"github.com/nshafer/phx"
+	"github.com/xiaowang7777/phx"
 )
 
 func main() {
